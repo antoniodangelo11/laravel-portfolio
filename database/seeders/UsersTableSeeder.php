@@ -37,11 +37,15 @@ class UsersTableSeeder extends Seeder
                 "email"     => "paolo.falcoapp@gmail.com",
                 "password"  => Hash::make('paolo1996'),
             ],
+            [
+                "name"      => "Simone",
+                "email"     => "smnrcc0@gmail.com",
+                "password"  => Hash::make('simo03'),
+            ],
         ];
 
         foreach ($users as $user) {
             User::create($user);
         }
     }
-    
 }
