@@ -18,12 +18,9 @@ use App\Http\Controllers\Admin\PageController as AdminPageController;
 
 Route::get('/', [GuestsPageController::class, 'home'])->name('guests.home');
 
-Route::get('/admin', [AdminPageController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('admin.dashboard');
+Route::get('/dashboard', [AdminPageController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')
-->name('admin.')
-->prefix('admin')
-->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
