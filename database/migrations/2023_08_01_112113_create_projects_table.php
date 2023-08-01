@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('projects_andrea', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
-
             $table->string('title', 50);
             $table->string('slug', 50)->unique();
             $table->string('author', 30);
@@ -25,7 +24,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image', 200)->nullable();
             $table->string('link_github', 150);
-            
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects_andrea');
+        Schema::dropIfExists('projects');
     }
 };

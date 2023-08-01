@@ -13,12 +13,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TypesTableSeeder::class,
             UsersTableSeeder::class,
-            ProjectsAlessioTableSeeder::class,
-            ProjectsAntonioTableSeeder::class,
-            ProjectsAndreaTableSeeder::class,
-            ProjectsDavideTableSeeder::class,
-            ProjectsPaoloTableSeeder::class,
-            ProjectsSimoneTableSeeder::class,
+            ProjectsTableSeeder::class
         ]);
     }
 }
