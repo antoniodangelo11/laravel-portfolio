@@ -277,7 +277,7 @@ return [
     [
         "type_id"          => "1",
         "title"            => "Spotify Web",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-03-22",
         "last_update"      => "2023-03-27",
         "collaborators"    => "No",
@@ -289,7 +289,7 @@ return [
     [
         "type_id"          => "1",
         "title"            => "Minefield",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-04-26",
         "last_update"      => "2023-04-27",
         "collaborators"    => "No",
@@ -301,7 +301,7 @@ return [
     [
         "type_id"          => "1",
         "title"            => "Social Post",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-05-03",
         "last_update"      => "2023-05-04",
         "collaborators"    => "No",
@@ -313,7 +313,7 @@ return [
     [
         "type_id"          => "1",
         "title"            => "Boolzapp",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-05-10",
         "last_update"      => "2023-05-15",
         "collaborators"    => "No",
@@ -325,7 +325,7 @@ return [
     [
         "type_id"          => "1",
         "title"            => "Avada Driving",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-05-29",
         "last_update"      => "2023-05-31",
         "collaborators"    => "No",
@@ -337,7 +337,7 @@ return [
     [
         "type_id"          => "2",
         "title"            => "DC Comics",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-06-29",
         "last_update"      => "2023-07-03",
         "collaborators"    => "No",
@@ -349,7 +349,7 @@ return [
     [
         "type_id"          => "3",
         "title"            => "Laravel Boolean",
-        "user_id"          => "1",
+        "user_id"          => "2",
         "creation_date"    => "2023-07-04",
         "last_update"      => "2023-07-004",
         "collaborators"    => "Antonio D'Angelo, Luca Casamassima, Davide Farci, Loris Marzocchi",
