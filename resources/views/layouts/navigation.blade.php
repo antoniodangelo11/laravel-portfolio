@@ -17,8 +17,18 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('admin.projects.index')" :active="request()->routeIs('admin.projects.index')">
+                    <x-nav-link :href="route('admin.projects.index')" :active="request()->routeIs('projects')">
                         {{ __('Projects') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('admin.projects.trashed')" :active="request()->routeIs('Bin')">
+                        {{ __('Bin') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('admin.projects.create')" :active="request()->routeIs('New Project')">
+                        {{ __('New Project') }}
                     </x-nav-link>
                 </div>
             </div>

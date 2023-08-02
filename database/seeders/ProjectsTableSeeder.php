@@ -3,30 +3,30 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Faker\Generator as Faker;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class ProjectsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run(Faker $faker)
+    
+    public function run()
     {
-        for ($i = 0; $i < 20; $i++) {
-            Project::create([
-                'title' => $faker->words(1, true),
-                'author' => $faker->firstName(),
-                'creation_date' => $faker->date(),
-                'last_update' => $faker->date(),
-                'collaborators' => null,
-                'description' => $faker->sentence(),
-                'image' => null,
-                'link_github' => $faker->url(),
-                'user_id' => '1',
+        foreach (config('projects') as $objProject) {
+
+            $slug = Project::slugger($objProject['title']);
+
+            $project = Project::create([
+                'type_id' => $objProject['type_id'],
+                'user_id' => $objProject['user_id'],
+                'title' => $objProject['title'],
+                'slug'  => $slug,
+                'creation_date' => $objProject['creation_date'],
+                'last_update' => $objProject['last_update'],
+                'collaborators' => $objProject['collaborators'],
+                'description' => $objProject['description'],
+                'image'       => $objProject['image'],
+                'link_github' => $objProject['link_github'],
+                
             ]);
         }
     }
