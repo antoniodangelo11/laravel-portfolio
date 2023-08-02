@@ -56,7 +56,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="type" class="block text-sm font-medium text-gray-700">Type</label>
+                <label for="type" class="block text-sm font-medium text-white">Type</label>
                 <select class="form-select mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm @error('type_id') border-red-500 @enderror" id="type" name="type_id">
                     <option selected>Change type</option>
                     
