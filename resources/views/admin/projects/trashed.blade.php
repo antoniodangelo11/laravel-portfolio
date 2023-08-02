@@ -3,19 +3,19 @@
     @if (session('delete_success'))
     @php $project = session('delete_success') @endphp
         <div class="bg-red-500 text-white p-4">
-            The player "{{ $project->title }}" has been Deleted
+            The project "{{ $project->title }}" has been Deleted
         </div>
     @endif
 
     @if (session('restore_success'))
     @php $project = session('restore_success') @endphp
         <div class="bg-green-500 text-white p-4">
-            The player "{{ $project->title }}" has been Restored
+            The project "{{ $project->title }}" has been Restored
         </div>
     @endif
 
     <div class="container p-2 mx-auto sm:p-4 dark:text-gray-100">
-        <h2 class="mb-4 text-2xl font-semibold leadi">Progetti</h2>
+        <h2 class="mb-4 text-2xl font-semibold leadi">Cestino</h2>
         <div class="overflow-x-auto">
             <table class="min-w-full text-xs">
                 <colgroup>

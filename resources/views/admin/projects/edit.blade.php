@@ -73,7 +73,7 @@
             </div>
 
             <div class="mb-3">
-                <h6 class="text-lg font-medium">technologies</h6>
+                <h6 class="text-lg font-medium text-white">technologies</h6>
                 @foreach ($technologies as $technology)
                     <div class="flex items-center mb-2">
                         <input 
@@ -84,7 +84,7 @@
                             name="technologies[]"
                             @if (in_array($technology->id, old('technologies', $project->technologies->pluck('id')->all()))) checked @endif 
                         >
-                        <label class="ml-2 text-gray-700" for="technology{{ $technology->id }}">
+                        <label class="ml-2 text-white" for="technology{{ $technology->id }}">
                             {{ $technology->name }}
                         </label>
                     </div>
