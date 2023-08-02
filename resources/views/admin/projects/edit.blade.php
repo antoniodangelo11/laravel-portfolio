@@ -32,23 +32,23 @@
             </div>
 
             <div class="mb-4">
-                <label for="creation_date" class="block mb-1 font-semibold text-white">Nazionalità</label>
-                <input type="text" id="creation_date" name="creation_date" class="w-full px-4 py-2 border rounded @error('creation_date') border-red-500 @enderror" value="{{ old('creation_date', $project->creation_date) }}">
+                <label for="creation_date" class="block mb-1 font-semibold text-white">Creation Date</label>
+                <input type="date" id="creation_date" name="creation_date" class="w-full px-4 py-2 border rounded @error('creation_date') border-red-500 @enderror" value="{{ old('creation_date', $project->creation_date) }}">
                 @error('creation_date')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                 @enderror
             </div>
 
             <div class="mb-4">
-                <label for="last_update" class="block mb-1 font-semibold text-white">Anno di nascita</label>
-                <input type="text" id="last_update" name="last_update" class="w-full px-4 py-2 border rounded @error('last_update') border-red-500 @enderror" value="{{ old('last_update', $project->last_update) }}">
+                <label for="last_update" class="block mb-1 font-semibold text-white">Last Update</label>
+                <input type="date" id="last_update" name="last_update" class="w-full px-4 py-2 border rounded @error('last_update') border-red-500 @enderror" value="{{ old('last_update', $project->last_update) }}">
                 @error('last_update')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
                 @enderror
             </div>
 
             <div class="mb-4">
-                <label for="collaborators" class="block mb-1 font-semibold text-white">Ruolo</label>
+                <label for="collaborators" class="block mb-1 font-semibold text-white">Collaborators</label>
                 <input type="text" id="collaborators" name="collaborators" class="w-full px-4 py-2 border rounded @error('collaborators') border-red-500 @enderror" value="{{ old('collaborators', $project->collaborators) }}">
                 @error('collaborators')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="link_github" class="block mb-1 font-semibold text-white">Soprannome</label>
+                <label for="link_github" class="block mb-1 font-semibold text-white">Link github</label>
                 <input type="text" id="link_github" name="link_github" class="w-full px-4 py-2 border rounded @error('link_github') border-red-500 @enderror" value="{{ old('link_github', $project->link_github) }}">
                 @error('link_github')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
@@ -81,7 +81,7 @@
             </div>
     
             <div class="mb-4">
-                <label for="description" class="block mb-1 font-semibold text-white">Descrizione</label>
+                <label for="description" class="block mb-1 font-semibold text-white">Description</label>
                 <textarea id="description" name="description" class="w-full px-4 py-2 border rounded @error('description') border-red-500 @enderror" rows="4" required>{{ old('description', $project->description) }}</textarea>
                 @error('description')
                     <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
