@@ -2,17 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-
-class Project extends Model
-{
-    use HasFactory;
-}
-<?php
-
-namespace App\Models;
-
 use App\Models\Type;
 use App\Models\User;
 use App\Traits\Slugger;
