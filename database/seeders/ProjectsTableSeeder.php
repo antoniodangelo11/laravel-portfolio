@@ -28,6 +28,8 @@ class ProjectsTableSeeder extends Seeder
                 'link_github' => $objProject['link_github'],
                 
             ]);
+
+            $project->technologies()->sync($objProject['technologies']);
         }
     }
 }

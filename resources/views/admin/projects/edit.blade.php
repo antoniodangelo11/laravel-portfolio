@@ -72,6 +72,26 @@
                 </div>
             </div>
 
+            <div class="mb-3">
+                <h6 class="text-lg font-medium">technologies</h6>
+                @foreach ($technologies as $technology)
+                    <div class="flex items-center mb-2">
+                        <input 
+                            class="form-checkbox h-5 w-5 text-blue-600" 
+                            type="checkbox" 
+                            id="technology{{ $technology->id }}" 
+                            value="{{ $technology->id }}"
+                            name="technologies[]"
+                            @if (in_array($technology->id, old('technologies', $project->technologies->pluck('id')->all()))) checked @endif 
+                        >
+                        <label class="ml-2 text-gray-700" for="technology{{ $technology->id }}">
+                            {{ $technology->name }}
+                        </label>
+                    </div>
+                @endforeach
+            </div>
+            
+
             <div class="mb-4">
                 <label for="link_github" class="block mb-1 font-semibold text-white">Link github</label>
                 <input type="text" id="link_github" name="link_github" class="w-full px-4 py-2 border rounded @error('link_github') border-red-500 @enderror" value="{{ old('link_github', $project->link_github) }}">

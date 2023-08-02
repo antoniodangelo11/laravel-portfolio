@@ -10,7 +10,7 @@ return [
         "collaborators" => "",
         "description" => "clone of spotify",
         "image"       => "uploads/SpotifyWeb.jpeg",
-        
+        "technologies" => [1, 2, 3],
         "link_github" => "https://github.com/AlessioAbbati/html-css-spotifyweb.git",
     ],
     [
@@ -22,7 +22,7 @@ return [
         "collaborators" => "",
         "description" => "clone of minefield",
         "image"       => "uploads/Campominato.jpeg",
-        
+        "technologies" => [1, 2, 3],
         "link_github" => "https://github.com/AlessioAbbati/js-campominato-dom.git",
     ],
     [
@@ -34,7 +34,7 @@ return [
         "collaborators" => "",
         "description" => "clone of social",
         "image"       => "uploads/SocialPosts.jpeg",
-        
+        "technologies" => [1, 2, 3],
         "link_github" => "https://github.com/AlessioAbbati/js-social-posts.git",
     ],
     [
@@ -46,7 +46,7 @@ return [
         "collaborators" => "",
         "description" => "clone of whatsapp",
         "image"       => "uploads/Boolzapp.jpeg",
-        
+        "technologies" => [1, 2, 4, 5],
         "link_github" => "https://github.com/AlessioAbbati/vue-boolzapp.git",
     ],
     [
@@ -58,7 +58,7 @@ return [
         "collaborators" => "",
         "description" => "clone of netflix",
         "image"       => "uploads/Boolflix.jpeg",
-        
+        "technologies" => [1, 2, 4, 5],
         "link_github" => "https://github.com/AlessioAbbati/vite-boolflix.git",
     ],
     [
@@ -70,7 +70,7 @@ return [
         "collaborators" => "",
         "description" => "clone of football league page",
         "image"       => "uploads/FootballLeague.jpeg",
-        
+        "technologies" => [1, 2, 4, 5],
         "link_github" => "https://github.com/AlessioAbbati/proj-html-vuejs.git",
     ],
     [
@@ -82,7 +82,7 @@ return [
         "collaborators" => "Felice D'Arcangelo - Lamberto Neri - Nicola Soggiu - Giulio D'Angelo - Domenico Ferrari",
         "description" => "clone of travel agency",
         "image"       => "uploads/LaravelBoolean.jpeg",
-        
+        "technologies" => [6, 7],
         "link_github" => "https://github.com/AlessioAbbati/laravel-boolean.git",
     ],
 
@@ -95,7 +95,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of Spotify Web",
         "image"            => "uploads/spotify.png",
-        // "technologies"        => [1, 2],
+        "technologies"        => [1, 2],
         "link_github"      => "https://github.com/DavideFarci/html-css-spotifyweb.git",
     ],
     [
@@ -107,7 +107,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of Minefield",
         "image"            => "uploads/campominato.png",
-        // "technologies"        => [1, 2, 3],
+        "technologies"        => [1, 2, 3],
         "link_github"      => "https://github.com/DavideFarci/js-campominato-dom.git",
     ],
     [
@@ -119,7 +119,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of Facebook",
         "image"            => "uploads/social_post.png",
-        // "technologies"        => [1, 2, 3],
+        "technologies"        => [1, 2, 3],
         "link_github"      => "https://github.com/DavideFarci/js-social-posts.git",
     ],
     [
@@ -131,7 +131,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of WhatsApp",
         "image"            => "uploads/boolzapp.png",
-        // "technologies"        => [1, 2, 3],
+        "technologies"        => [1, 2, 3],
         "link_github"      => "https://github.com/DavideFarci/vue-boolzapp.git",
     ],
     [
@@ -143,7 +143,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of Nelflix",
         "image"            => "uploads/boolflix.png",
-        // "technologies"        => [1, 2, 4],
+        "technologies"        => [1, 2, 4],
         "link_github"      => "https://github.com/DavideFarci/vite-boolflix.git",
     ],
     [
@@ -155,7 +155,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of a Website",
         "image"            => "uploads/project-html-vueJs.png",
-        // "technologies"        => [1, 2, 4],
+        "technologies"        => [1, 2, 4],
         "link_github"      => "https://github.com/DavideFarci/proj-html-vuejs.git",
     ],
     [
@@ -167,7 +167,7 @@ return [
         "collaborators"    => "",
         "description"      => "A clone of a Website of DC Comics",
         "image"            => "uploads/dc_comics.png",
-        // "technologies"        => [5, 6],
+        "technologies"        => [5, 6],
         "link_github"      => "https://github.com/DavideFarci/laravel-dc-comics.git",
     ],
     [
@@ -179,7 +179,7 @@ return [
         "collaborators"    => "Antonio D'Angelo, Luca Casamassima, Davide Farci, Loris Marzocchi",
         "description"      => "A invoices organizer",
         "image"            => "uploads/laravel_boolean.png",
-        // "technologies"        => [5, 6, 4],
+        "technologies"        => [5, 6, 4],
         "link_github"      => "https://github.com/SimoneRicco/laravel-boolean.git",
     ],
 
@@ -191,7 +191,7 @@ return [
         "collaborators" => "No",
         "image" => "uploads/spotifyweb.png",
         "description" => "A clone of the spotify web interface",
-        // "technologies" => [1, 2],
+        "technologies" => [1, 2],
         "type_id" => 1,
         "link_github" => "https://github.com/Paolo96700/html-css-spotifyweb.git",
     ],
@@ -204,7 +204,7 @@ return [
         "collaborators" => "No",
         "image" => "uploads/campominato.png",
         "description" => "A minefield clone",
-        // "technologies" => [1, 2, 3],
+        "technologies" => [1, 2, 3],
         "type_id" => 1,
         "link_github" => "https://github.com/Paolo96700/js-campominato-dom.git",
     ],
@@ -217,7 +217,7 @@ return [
         "collaborators" => "No",
         "image" => "uploads/socialpost.png",
         "description" => "A Facebook clone",
-        // "technologies" => [1, 2, 3],
+        "technologies" => [1, 2, 3],
         "type_id" => 1,
         "link_github" => "https://github.com/Paolo96700/js-social-posts.git",
     ],
@@ -230,7 +230,7 @@ return [
         "collaborators" => "No",
         "image" => "uploads/boolzapp.png",
         "description" => "A Whatsapp clone",
-        // "technologies" => [4, 5],
+        "technologies" => [4, 5],
         "type_id" => 1,
         "link_github" => "https://github.com/Paolo96700/vite-boolflix.git",
     ],
@@ -243,7 +243,7 @@ return [
         "collaborators" => "No",
         "image" => "uploads/schoolchess.png",
         "description" => "Avada Driving clone",
-        // "technologies" => [4, 5],
+        "technologies" => [4, 5],
         "type_id" => 1,
         "link_github" => "https://github.com/Paolo96700/proj-html-vuejs.git",
     ],
@@ -256,7 +256,7 @@ return [
         "collaborators" => "No",
         "image" => "uploads/dccomics.png",
         "description" => "A Dc Comics site homepage clone",
-        // "technologies" => [6, 7],
+        "technologies" => [6, 7],
         "type_id" => 2,
         "link_github" => "https://github.com/Paolo96700/laravel-dc-comics.git",
     ],
@@ -269,7 +269,7 @@ return [
         "collaborators" => "Paolo Falco, Antonio Nicolaci, Alessandra Casu, Gary Smith Alvarez Venturo, Renato Taccogna, Pierluca Strianese",
         "image" => "uploads/laravelboolean.png",
         "description" => "A invoices organizer",
-        // "technologies" => [6, 7],
+        "technologies" => [6, 7],
         "type_id" => 3,
         "link_github" => "https://github.com/Paolo96700/laravel-boolean.git",
     ],
@@ -283,7 +283,7 @@ return [
         "collaborators"    => "No",
         "description"      => "A clone of the spotify web interface",
         "image"            => "uploads/SpotifyWeb.png",
-        // "technologies"     => [1, 2],
+        "technologies"     => [1, 2],
         "link_github"      => "https://github.com/antoniodangelo11/html-css-spotifyweb.git",
     ],
     [
@@ -295,7 +295,7 @@ return [
         "collaborators"    => "No",
         "description"      => "A minefield clone",
         "image"            => "uploads/Minefield.png",
-        // "technologies"     => [1, 2, 3],
+        "technologies"     => [1, 2, 3],
         "link_github"      => "https://github.com/antoniodangelo11/js-campominato-dom.git",
     ],
     [
@@ -307,7 +307,7 @@ return [
         "collaborators"    => "No",
         "description"      => "A Facebook clone",
         "image"            => "uploads/SocialsPost.png",
-        // "technologies"     => [1, 2, 3],
+        "technologies"     => [1, 2, 3],
         "link_github"      => "https://github.com/antoniodangelo11/js-social-posts.git",
     ],
     [
@@ -319,7 +319,7 @@ return [
         "collaborators"    => "No",
         "description"      => "A Whatsapp clone",
         "image"            => "uploads/Boolzap.png",
-        // "technologies"     => [4, 5],
+        "technologies"     => [4, 5],
         "link_github"      => "https://github.com/antoniodangelo11/vue-boolzapp.git",
     ],
     [
@@ -331,7 +331,7 @@ return [
         "collaborators"    => "No",
         "description"      => "Avada Driving clone",
         "image"            => "uploads/AvadaDriving.png",
-        // "technologies"     => [4, 5],
+        "technologies"     => [4, 5],
         "link_github"      => "https://github.com/antoniodangelo11/proj-html-vuejs.git",
     ],
     [
@@ -343,7 +343,7 @@ return [
         "collaborators"    => "No",
         "description"      => "A Dc Comics site homepage clone",
         "image"            => "uploads/LaravelDCcomics.png",
-        // "technologies"     => [6, 7],
+        "technologies"     => [6, 7],
         "link_github"      => "https://github.com/antoniodangelo11/laravel-dc-comics.git",
     ],
     [
@@ -355,7 +355,7 @@ return [
         "collaborators"    => "Antonio D'Angelo, Luca Casamassima, Davide Farci, Loris Marzocchi",
         "description"      => "A invoices organizer",
         "image"            => "uploads/LaravelBoolean.png",
-        // "technologies"     => [6, 7],
+        "technologies"     => [6, 7],
         "link_github"      => "https://github.com/SimoneRicco/laravel-boolean.git",
     ],
     

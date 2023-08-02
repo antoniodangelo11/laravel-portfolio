@@ -34,6 +34,7 @@
                         <th class="p-3">Last update</th>
                         <th class="p-3">Collaborators</th>
                         <th class="p-3">Type</th>
+                        <th class="p-3">Technologies</th>
                         <th class="p-3 text-center">Actions</th>
                     </tr>
                 </thead>
@@ -44,7 +45,7 @@
                             <p>{{ $project->title }}</p>
                         </td>
                         <td class="p-3">
-                            <p>{{ $project->user_id }}</p>
+                            <p>{{ $project->user->name }}</p>
                         </td>
                         <td class="p-3">
                             <p>{{ $project->creation_date }}</p>
@@ -57,10 +58,16 @@
                             <p>{{ $project->collaborators }}</p>
                         </td>
                         <td class="p-3">
-                            <p>{{ $project->type_id }}</p>
+                            <p>{{ $project->type->name }}</p>
                         </td>
                         <td class="p-3">
-                            <div style="display: flex; gap: 10px;">
+                            {{-- @foreach ($project->technologies as $technology)
+                                <p>{{ $technology->name }}</p>{{ !$loop->last ? ',' : '' }}
+                            @endforeach --}}
+                            <p>{{ implode(', ', $project->technologies->pluck('name')->all()) }}</p>
+                        </td>
+                        <td class="p-3">
+                            <div class="flex justify-center gap-4">
                                 <button class="px-7 py-1 font-semibold border rounded dark:border-gray-100 dark:text-gray-100" onclick="window.location='{{ route('admin.projects.show', ['project' => $project]) }}'">Info</button>
                                 <button class="px-7 py-1 font-semibold border rounded dark:border-gray-100 dark:text-gray-100" onclick="window.location='{{ route('admin.projects.edit', ['project' => $project]) }}'">Edit</button>
                                 <form class="d-inline-block" method="POST" action="{{ route('admin.projects.destroy', ['project' => $project]) }}">
