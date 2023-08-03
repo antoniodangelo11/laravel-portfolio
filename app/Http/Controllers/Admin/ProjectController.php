@@ -24,7 +24,7 @@ class ProjectController extends Controller
         'image3'             => 'nullable|image|max:1024',
         'image4'             => 'nullable|image|max:1024',
         'image5'             => 'nullable|image|max:1024',
-        // 'video'              => 'nullable|video|max:',
+        'video'              => 'nullable|file|mimes:webm,mp4,avi,flv|max:10240',
         'link_github'        => 'required|url|max:200',
         'technologies'       => 'nullable|array',
         'technologies. *'    => 'integer|exists:technologies,id',
@@ -84,6 +84,10 @@ class ProjectController extends Controller
         if ($request->has('image5')) {
             $imagePath = Storage::put('uploads', $data['image5']);
             $newProject->image5          = $imagePath;
+        }
+        if ($request->has('video')) {
+            $videoPath = Storage::put('uploads', $data['video']);
+            $newProject->video          = $videoPath;
         }
         $newProject->last_update     = $data['last_update'];
         $newProject->collaborators   = $data['collaborators'];
@@ -154,6 +158,13 @@ class ProjectController extends Controller
                 Storage::delete($project->image5);
             }
             $project->image5 = $imagePath;
+        }
+        if ($request->has('video')) {
+            $videoPath = Storage::disk('public')->put('uploads', $data['video']);
+            if ($project->video) {
+                Storage::delete($project->video);
+            }
+            $project->video = $videoPath;
         }
 
         $project->title             = $data['title'];

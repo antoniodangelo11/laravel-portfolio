@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('image3', 200)->nullable();
             $table->string('image4', 200)->nullable();
             $table->string('image5', 200)->nullable();
-            // $table->string('video', 300)->nullable();
+            $table->string('video', 300)->nullable();
             $table->string('link_github', 150);
             // creo la colonna della chiave esterna
 

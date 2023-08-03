@@ -20,15 +20,76 @@
                 @enderror
             </div>
 
-            <div class="flex items-center mb-3">
-                <label for="image" class="px-4 py-2 bg-gray-200 rounded-l">Upload</label>
-                <input type="file" class="hidden @error('image') is-invalid @enderror" id="image" name="image">
-                <label for="image" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
-                    Select File
-                </label>
+            <div class="flex px-2">
+
+                <div class="flex items-center mb-3 px-1">
+                    <label for="image1" class="px-4 py-2 bg-gray-200 rounded-l">Upload Image 1</label>
+                    <input type="file" class="hidden @error('image1') is-invalid @enderror" id="image1" name="image1">
+                    <label for="image1" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('image1') {{ $message }} @enderror
+                </div>
+
+                <div class="flex items-center mb-3 px-1">
+                    <label for="image2" class="px-4 py-2 bg-gray-200 rounded-l">Upload Image 2</label>
+                    <input type="file" class="hidden @error('image2') is-invalid @enderror" id="image2" name="image2">
+                    <label for="image2" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('image2') {{ $message }} @enderror
+                </div>
+
+                <div class="flex items-center mb-3 px-1">
+                    <label for="image3" class="px-4 py-2 bg-gray-200 rounded-l">Upload Image 3</label>
+                    <input type="file" class="hidden @error('image3') is-invalid @enderror" id="image3" name="image3">
+                    <label for="image3" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('image3') {{ $message }} @enderror
+                </div>
+
+                <div class="flex items-center mb-3 px-1">
+                    <label for="image4" class="px-4 py-2 bg-gray-200 rounded-l">Upload Image 4</label>
+                    <input type="file" class="hidden @error('image4') is-invalid @enderror" id="image4" name="image4">
+                    <label for="image4" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('image4') {{ $message }} @enderror
+                </div>
+
+                <div class="flex items-center mb-3 px-1">
+                    <label for="image5" class="px-4 py-2 bg-gray-200 rounded-l">Upload Image 5</label>
+                    <input type="file" class="hidden @error('image5') is-invalid @enderror" id="image5" name="image5">
+                    <label for="image5" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('image5') {{ $message }} @enderror
+                </div>
+
             </div>
-            <div class="invalid-feedback">
-                @error('image') {{ $message }} @enderror
+
+            <div class="px-3">
+                <div class="flex items-center mb-3">
+                    <label for="video" class="px-4 py-2 bg-gray-200 rounded-l">Upload Video</label>
+                    <input type="file" class="hidden @error('video') is-invalid @enderror" id="video" name="video">
+                    <label for="video" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('video') {{ $message }} @enderror
+                </div>
             </div>
 
             <div class="mb-4">

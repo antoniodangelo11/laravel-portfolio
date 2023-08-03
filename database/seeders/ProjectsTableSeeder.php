@@ -29,7 +29,7 @@ class ProjectsTableSeeder extends Seeder
                 'image3'            => $objProject['image3'],
                 'image4'            => $objProject['image4'],
                 'image5'            => $objProject['image5'],
-                // 'video'             => $objProject['video'],
+                'video'             => $objProject['video'],
                 'link_github'       => $objProject['link_github'],
                 
             ]);

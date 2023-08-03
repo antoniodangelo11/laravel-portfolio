@@ -78,6 +78,19 @@
 
             </div>
 
+            <div class="px-3">
+                <div class="flex items-center mb-3">
+                    <label for="video" class="px-4 py-2 bg-gray-200 rounded-l">Upload Video</label>
+                    <input type="file" class="hidden @error('video') is-invalid @enderror" id="video" name="video">
+                    <label for="video" class="px-4 py-2 text-white bg-blue-500 rounded-r cursor-pointer hover:bg-blue-600">
+                        Select File
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    @error('video') {{ $message }} @enderror
+                </div>
+            </div>
+
             <div class="mb-4">
                 <label for="creation_date" class="block mb-1 font-semibold text-white">Creation Date</label>
                 <input type="date" id="creation_date" name="creation_date" class="w-full px-4 py-2 border rounded @error('creation_date') border-red-500 @enderror" value="{{ old('creation_date') }}">
