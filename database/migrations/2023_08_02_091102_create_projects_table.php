@@ -18,7 +18,12 @@ return new class extends Migration
             $table->date('last_update');
             $table->string('collaborators', 150)->nullable();
             $table->text('description')->nullable();
-            $table->string('image', 200)->nullable();
+            $table->string('image1', 200)->nullable();
+            $table->string('image2', 200)->nullable();
+            $table->string('image3', 200)->nullable();
+            $table->string('image4', 200)->nullable();
+            $table->string('image5', 200)->nullable();
+            // $table->string('video', 300)->nullable();
             $table->string('link_github', 150);
             // creo la colonna della chiave esterna
 

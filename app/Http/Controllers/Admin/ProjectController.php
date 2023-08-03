@@ -12,17 +12,22 @@ use Illuminate\Support\Facades\Storage;
 class ProjectController extends Controller
 {
     private $validations = [
-        'title'             => 'required|string|max:50',
-        'type_id'           => 'required|integer|exists:types,id',
-        'user_id'           => 'required|integer|exists:users,id',
-        'creation_date'     => 'required|date',
-        'last_update'       => 'required|date',
-        'collaborators'     => 'nullable|string|max:150',
-        'description'       => 'string',
-        'image'             => 'nullable|image|max:1024',
-        'link_github'       => 'required|url|max:200',
-        'technologies'      => 'nullable|array',
-        'technologies. *'   => 'integer|exists:technologies,id',
+        'title'              => 'required|string|max:50',
+        'type_id'            => 'required|integer|exists:types,id',
+        'user_id'            => 'required|integer|exists:users,id',
+        'creation_date'      => 'required|date',
+        'last_update'        => 'required|date',
+        'collaborators'      => 'nullable|string|max:150',
+        'description'        => 'string',
+        'image1'             => 'nullable|image|max:1024',
+        'image2'             => 'nullable|image|max:1024',
+        'image3'             => 'nullable|image|max:1024',
+        'image4'             => 'nullable|image|max:1024',
+        'image5'             => 'nullable|image|max:1024',
+        // 'video'              => 'nullable|video|max:',
+        'link_github'        => 'required|url|max:200',
+        'technologies'       => 'nullable|array',
+        'technologies. *'    => 'integer|exists:technologies,id',
         
     ];
 
@@ -60,9 +65,25 @@ class ProjectController extends Controller
         $newProject->type_id         = $data['type_id'];
         $newProject->user_id         = $data['user_id'];
         $newProject->creation_date   = $data['creation_date'];
-        if ($request->has('image')) {
-            $imagePath = Storage::put('uploads', $data['image']);
-            $newProject->image          = $imagePath;
+        if ($request->has('image1')) {
+            $imagePath = Storage::put('uploads', $data['image1']);
+            $newProject->image1          = $imagePath;
+        }
+        if ($request->has('image2')) {
+            $imagePath = Storage::put('uploads', $data['image2']);
+            $newProject->image2          = $imagePath;
+        }
+        if ($request->has('image3')) {
+            $imagePath = Storage::put('uploads', $data['image3']);
+            $newProject->image3          = $imagePath;
+        }
+        if ($request->has('image4')) {
+            $imagePath = Storage::put('uploads', $data['image4']);
+            $newProject->image4          = $imagePath;
+        }
+        if ($request->has('image5')) {
+            $imagePath = Storage::put('uploads', $data['image5']);
+            $newProject->image5          = $imagePath;
         }
         $newProject->last_update     = $data['last_update'];
         $newProject->collaborators   = $data['collaborators'];
@@ -99,12 +120,40 @@ class ProjectController extends Controller
         $request->validate($this->validations, $this->validations_messages);
         $data = $request->all();
 
-        if ($request->has('image')) {
-            $imagePath = Storage::disk('public')->put('uploads', $data['image']);
-            if ($project->image) {
-                Storage::delete($project->image);
+        if ($request->has('image1')) {
+            $imagePath = Storage::disk('public')->put('uploads', $data['image1']);
+            if ($project->image1) {
+                Storage::delete($project->image1);
             }
-            $project->image = $imagePath;
+            $project->image1 = $imagePath;
+        }
+        if ($request->has('image2')) {
+            $imagePath = Storage::disk('public')->put('uploads', $data['image2']);
+            if ($project->image2) {
+                Storage::delete($project->image2);
+            }
+            $project->image2 = $imagePath;
+        }
+        if ($request->has('image3')) {
+            $imagePath = Storage::disk('public')->put('uploads', $data['image3']);
+            if ($project->image3) {
+                Storage::delete($project->image3);
+            }
+            $project->image3 = $imagePath;
+        }
+        if ($request->has('image4')) {
+            $imagePath = Storage::disk('public')->put('uploads', $data['image4']);
+            if ($project->image4) {
+                Storage::delete($project->image4);
+            }
+            $project->image4 = $imagePath;
+        }
+        if ($request->has('image5')) {
+            $imagePath = Storage::disk('public')->put('uploads', $data['image5']);
+            if ($project->image5) {
+                Storage::delete($project->image5);
+            }
+            $project->image5 = $imagePath;
         }
 
         $project->title             = $data['title'];
