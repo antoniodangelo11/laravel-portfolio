@@ -15,9 +15,7 @@
     </div>
     
     
-    {{-- <img src="{{ asset('storage/' . $project->user->image) }}" alt="{{ $project->user->id }}"> --}}
-    
-    
+    {{-- <img src="{{ asset('storage/uploads/' . $project->user->image) }}" alt="{{ $project->user->id }}"> --}}
                        
     
                         

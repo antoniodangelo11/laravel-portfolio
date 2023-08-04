@@ -47,7 +47,7 @@
                             <button class="inline-flex items-center px-3 py-[-25px] border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
                                 <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                                     <span class="sr-only">Open user menu</span>
-                                    <img class="w-10 h-10 rounded-full" src="{{ (Auth::user()->image) }}" alt="{{ Auth::user()->id }}">
+                                    <img class="w-10 h-10 rounded-full" src="storage/uploads/{{ Auth::user()->image }}" alt="{{ Auth::user()->id }}">
                                 </button>
                             </button>
                         </div>
