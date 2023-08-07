@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="flex flex-col mt-5">
-            <video autoplay loop muted class="video h-[40rem]">
+            <video autoplay loop muted class="video h-[35rem]">
                 <source 
                     src="video/red-flag.mp4"
                     type="video/mp4"
