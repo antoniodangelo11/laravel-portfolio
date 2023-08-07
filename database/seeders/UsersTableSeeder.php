@@ -17,37 +17,37 @@ class UsersTableSeeder extends Seeder
                 "name"      => "Alessio Abbati",
                 "email"     => "abbatialessio94@gmail.com",
                 "password"  => Hash::make('mandrake117'),
-                "image"     => "alessio-abbati.jpg",
+                "image"     => "Alessio.png",
             ],
             [
                 "name"      => "Antonio D'angelo",
                 "email"     => "antonio.dangelo1190@gmail.com",
                 "password"  => Hash::make('antoniodangelo1190'),
-                "image"     => "antonio-dangelo.jpg",
+                "image"     => "Antonino.png",
             ],
             [
                 "name"      => "Davide Farci",
                 "email"     => "davide.farci9@gmail.com",
                 "password"  => Hash::make('bobboi92'),
-                "image"     => "davide-farci.jpg",
+                "image"     => "Davide.png",
             ],
             [
                 "name"      => "Paolo Falco",
                 "email"     => "paolo.falcoapp@gmail.com",
                 "password"  => Hash::make('paolo1996'),
-                "image"     => "paolo-falco.png",
+                "image"     => "Paolo.png",
             ],
             [
                 "name"      => "Simone Ricco",
                 "email"     => "smnrcc0@gmail.com",
                 "password"  => Hash::make('simo03'),
-                "image"     => "simone-ricco.jpg",
+                "image"     => "Simone.png",
             ],
             [
                 "name"      => "Andrea Serra",
                 "email"     => "serra.andrea1997@gmail.com",
                 "password"  => Hash::make('andreaserra1997'),
-                "image"     => "andrea-serra.jpg",
+                "image"     => "Andrea.png",
             ],
         ];
 
