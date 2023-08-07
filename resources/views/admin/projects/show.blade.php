@@ -6,12 +6,16 @@
 
     <div class="flex justify-center flex-wrap">
         <img src="{{ asset('storage/uploads' . $project->image1) }}" alt="{{ $project->title }}">
-        <video controls>
-            <source 
-                src="{{ asset('storage/uploads' . $project->video) }}"
-                type="video/webm"
-            />
-        </video>
+        <div class="flex flex-col mb-5">
+            <h1 class="text-white text-center py-2">Video: {{ $project->title }}</h1>
+            <video autoplay loop muted class="video h-[40rem]">
+                <source 
+                    src="{{ asset('storage/uploads' . $project->video) }}"
+                    type="video/webm"
+                />
+            </video>
+        </div>
+       
     </div>
     
     
