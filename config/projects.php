@@ -201,7 +201,7 @@ return [
         "image3"       => "/02-boolflix-03",
         "image4"       => "",
         "image5"       => "",
-        "video"        => "/02-boolflix-video.wmv",
+        "video"        => "/02-boolflix-video.webm",
         "technologies" => [1, 2, 4],
         "link_github" => "https://github.com/DavideFarci/vite-boolflix.gitt",
     ],
