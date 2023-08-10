@@ -28,7 +28,7 @@ class ProjectController extends Controller
         'link_github'        => 'required|url|max:200',
         'technologies'       => 'nullable|array',
         'technologies. *'    => 'integer|exists:technologies,id',
-        
+
     ];
 
     private $validations_messages = [
@@ -37,14 +37,14 @@ class ProjectController extends Controller
         'url'           => 'il campo deve essere un url valido',
         'exists'        => 'Valore non valido',
     ];
-    
+
     public function index()
     {
-        $projects = Project::paginate(6);
+        $projects = Project::sortable()->paginate(6);
         return view('admin.projects.index', compact('projects'));
     }
 
-    
+
     public function create()
     {
         $types = Type::all();
@@ -52,12 +52,12 @@ class ProjectController extends Controller
         return view('admin.projects.create', compact('types', 'technologies'));
     }
 
-    
+
     public function store(Request $request)
     {
         $request->validate($this->validations, $this->validations_messages);
         $data = $request->all();
-        
+
         // Salvare i dati nel database
         $newProject = new Project();
         $newProject->title           = $data['title'];
@@ -100,24 +100,24 @@ class ProjectController extends Controller
         return redirect()->route('admin.projects.show', ['project' => $newProject]);
     }
 
-    
+
     public function show($slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
         return view('admin.projects.show', compact('project'));
     }
 
-    
+
     public function edit($slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
         $types = Type::all();
         $technologies = Technology::all();
-        
+
         return view('admin.projects.edit', compact('project', 'types', 'technologies'));
     }
 
-    
+
     public function update(Request $request, $slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
@@ -182,7 +182,7 @@ class ProjectController extends Controller
         return redirect()->route('admin.projects.show', ['project' => $project]);
     }
 
-    
+
     public function destroy($slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
@@ -198,7 +198,7 @@ class ProjectController extends Controller
         Project::withTrashed()->where('slug', $slug)->restore();
         $project = Project::where('slug', $slug)->firstOrFail();
 
-        
+
 
         return to_route('admin.projects.trashed')->with('restore_success', $project);
     }
@@ -209,7 +209,7 @@ class ProjectController extends Controller
         Project::withTrashed()->where('slug', $slug)->restore();
         $project = Project::where('slug', $slug)->firstOrFail();
 
-        
+
 
         return to_route('admin.projects.index')->with('cancel_success', $project);
     }
@@ -224,7 +224,7 @@ class ProjectController extends Controller
     public function harddelete($slug)
     {
         $project = Project::withTrashed()->where('slug', $slug)->first();
-        
+
         if ($project->file) {
             Storage::delete($project->file);
         }

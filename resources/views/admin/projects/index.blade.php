@@ -28,12 +28,12 @@
                 </colgroup>
                 <thead class="dark:bg-gray-700">
                     <tr class="text-left">
-                        <th class="p-3">Title</th>
-                        <th class="p-3">Author</th>
-                        <th class="p-3">Creation date</th>
-                        <th class="p-3">Last update</th>
-                        <th class="p-3">Collaborators</th>
-                        <th class="p-3">Type</th>
+                        <th class="p-3 text-blue-600/100">@sortablelink('title')</th>
+                        <th class="p-3 text-blue-600/100">@sortablelink('user.name', 'Author')</th>
+                        <th class="p-3 text-blue-600/100">@sortablelink('creation_date', 'Creation Date')</th>
+                        <th class="p-3 text-blue-600/100">@sortablelink('last_update', 'Last Update')</th>
+                        <th class="p-3 text-blue-600/100">@sortablelink('collaborators')</th>
+                        <th class="p-3 text-blue-600/100">@sortablelink('type_id', 'Type')</th>
                         <th class="p-3">Technologies</th>
                         <th class="p-3 text-center">Actions</th>
                     </tr>
@@ -87,6 +87,7 @@
         </div>
     </div>
     <div class="container mx-auto mt-4">
-        {{ $projects->links('vendor.pagination.tailwind') }}
+        {{-- {{ $projects->links('vendor.pagination.tailwind') }} --}}
+        {!! $projects->appends(Request::except('page'))->render() !!}
     </div>
 </x-app-layout>
