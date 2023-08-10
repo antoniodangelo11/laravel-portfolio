@@ -184,7 +184,7 @@ return [
         "image3"        => "/02Boolzapp_03.png",
         "image4"        => "/02Boolzapp_04.png",
         "image5"        => "/02Boolzapp_05.png",
-        "video"         => "/02Bollzapp_video.mp4",
+        "video"         => "/02Boolzapp_video.mp4",
         "technologies"  => [4, 5],
         "link_github"   => "https://github.com/antoniodangelo11/vue-boolzapp.git",
     ],
